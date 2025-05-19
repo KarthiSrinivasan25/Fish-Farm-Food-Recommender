@@ -1,0 +1,84 @@
+{% extends 'management/manage_home.html' %}
+{% load static %}
+{% block content %}
+
+
+<style>
+table, th, td {
+  border:1px solid black;
+
+  font-color:white;
+
+}
+
+th{
+ background-color:black;
+ color:white;
+
+}
+
+
+h1{color:white}
+</style>
+
+
+
+   <div class="container" style="margin-top:80px"><br><br>
+        <center>
+            <h1>VENDOR DETAILS</h1></center>
+        <br><br>
+
+
+        <table class="table" style="margin-left:10px">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+  <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Phone Number</th>
+      <th>Vendor Company Name</th>
+      <th>Vendor Company Address</th>
+      <th>Buisness Classification</th>
+      <th>City</th>
+<!--      <th>state</th>-->
+<!--      <th>City</th>-->
+<!--      <th>Country</th>-->
+      <th>To Admin</th>
+<!--      <th>TUNGSTEN</th>-->
+<!--      <th>status</th>-->
+
+ </tr>
+            </thead>
+            <tbody>
+            {% for data in datas %}
+            <tr style="background-color:#256D85;color:white;text-align: center;">
+            <td style="color:white;">{{data.name}}</td>
+            <td style="color:white;">{{data.email}}</td>
+            <td style="color:white;">{{data.phone}}</td>
+            <td style="color:white;">{{data.vendor_name}}</td>
+            <td style="color:white;">{{data.vendor_address}}</td>
+            <td style="color:white;">{{data.buisness_classification}}</td>
+            <td style="color:white;">{{data.city}}</td>
+<!--            <td style="color:white;">{{data.city}}</td>-->
+<!--            <td style="color:white;">{{data.country}}</td>-->
+<!--            <td style="color:white;">{{data.molybdenum}}</td>-->
+<!--            <td style="color:white;">{{data.vanadium}}</td>-->
+<!--            <td style="color:white;">{{data.TUNGSTEN}}</td>-->
+
+
+
+
+
+            <td style="color:white;"><a href="/send_admin_2/{{data.id}}/"><input type="button" value="Approve"></a></td>
+
+  </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

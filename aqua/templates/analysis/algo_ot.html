@@ -1,0 +1,86 @@
+{% extends 'analysis/analysis_home.html' %}
+{% load static %}
+{% block content %}
+
+
+<style>
+table, th, td {
+  border:1px solid black;
+
+  font-color:white;
+
+}
+
+th{
+ background-color:black;
+ color:white;
+
+}
+
+
+h1{color:black}
+</style>
+
+
+
+   <div class="container" style="margin-top:80px"><br><br><br><br>
+        <center>
+            <h1> CLIENT FOOD SUGGESTION</h1></center>
+        <br><br>
+
+
+        <table class="table" style="margin-left:10px">
+            <thead>
+
+
+            <tr style="font-family:verdana; background-color:white;text-align: center;">
+  <tr>
+      <th>Client Name</th>
+      <th>Fish Variety</th>
+      <th>Fish Quantity (In Kgs)</th>
+      <th>Culture Operation Type</th>
+      <th>Input Type</th>
+      <th>Food Variety</th>
+                <th>Food Suggestion</th>
+<!--      <th>Organisation Type</th>-->
+<!--      <th>state</th>-->
+<!--      <th>City</th>-->
+<!--      <th>Country</th>-->
+<!--      <th>To Analysis</th>-->
+<!--      <th>TUNGSTEN</th>-->
+<!--      <th>status</th>-->
+
+ </tr>
+            </thead>
+            <tbody>
+            {% for data in datas %}
+            <tr style="background-color:#256D85;color:white;text-align: center;">
+            <td style="color:white;">{{data.name}}</td>
+            <td style="color:white;">{{data.fish_variety}}</td>
+            <td style="color:white;">{{data.fish_quantity}}</td>
+            <td style="color:white;">{{data.culture_operation_type}}</td>
+            <td style="color:white;">{{data.input_type}}</td>
+            <td style="color:white;">{{data.food_variety}}</td>
+                 <td style="color:white;">{{data.final}}</td>
+<!--            <td style="color:white;">{{data.state}}</td>-->
+<!--            <td style="color:white;">{{data.city}}</td>-->
+<!--            <td style="color:white;">{{data.country}}</td>-->
+<!--            <td style="color:white;">{{data.molybdenum}}</td>-->
+<!--            <td style="color:white;">{{data.vanadium}}</td>-->
+<!--            <td style="color:white;">{{data.TUNGSTEN}}</td>-->
+
+
+
+
+
+<!--            <td style="color:white;"><a href="/get_input/{{data.id}}/"><input type="button" value="ANLAYSE"></a></td>-->
+
+  </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+{% extends 'client/client_home.html' %}
+{% block content %}
+<html>
+{% load static %}
+<head>
+	<meta charset="utf-8">
+	<title>Form-v10 by Colorlib</title>
+	<!-- Mobile Specific Metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'client_details/css/montserrat-font.css' %}">
+	<link rel="stylesheet" type="text/css" href="{% static 'client_details/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}">
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'client_details/css/style.css' %}"/>
+</head>
+<body class="form-v10">
+<!--	<div class="page-content">-->
+		<div class="form-v10-content">
+			<form class="form-detail" action="/client_details_1/" method="post" id="myform">
+                  {% csrf_token %}
+<!--				<div class="form-left">-->
+<!--					<h2>General Infomation</h2>-->
+<!--					<div class="form-row" style="left-margin:100%">-->
+<!--						<select name="title">-->
+<!--						    <option class="option" value="title">Title</option>-->
+<!--						    <option class="option" value="businessman">Businessman</option>-->
+<!--						    <option class="option" value="reporter">Reporter</option>-->
+<!--						    <option class="option" value="secretary">Secretary</option>-->
+<!--						</select>-->
+<!--						<span class="select-btn">-->
+<!--						  	<i class="zmdi zmdi-chevron-down"></i>-->
+<!--						</span>-->
+<!--					</div>-->
+<!--					<div class="form-group">-->
+<!--						<div class="form-row form-row-1">-->
+<!--							<input type="text" name="first_name" id="first_name" class="input-text" placeholder="First Name" required>-->
+<!--						</div>-->
+<!--						<div class="form-row form-row-2">-->
+<!--							<input type="text" name="last_name" id="last_name" class="input-text" placeholder="Last Name" required>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="form-row">-->
+<!--						<select name="position">-->
+<!--						    <option value="position">Position</option>-->
+<!--						    <option value="director">Director</option>-->
+<!--						    <option value="manager">Manager</option>-->
+<!--						    <option value="employee">Employee</option>-->
+<!--						</select>-->
+<!--						<span class="select-btn">-->
+<!--						  	<i class="zmdi zmdi-chevron-down"></i>-->
+<!--						</span>-->
+<!--					</div>-->
+<!--					<div class="form-row">-->
+<!--						<input type="text" name="company" class="company" id="company" placeholder="Company" required>-->
+<!--					</div>-->
+<!--					<div class="form-group">-->
+<!--						<div class="form-row form-row-3">-->
+<!--							<input type="text" name="business" class="business" id="business" placeholder="Business Arena" required>-->
+<!--						</div>-->
+<!--						<div class="form-row form-row-4">-->
+<!--							<select name="employees">-->
+<!--							    <option value="employees">Employees</option>-->
+<!--							    <option value="trainee">Trainee</option>-->
+<!--							    <option value="colleague">Colleague</option>-->
+<!--							    <option value="associate">Associate</option>-->
+<!--							</select>-->
+<!--							<span class="select-btn">-->
+<!--							  	<i class="zmdi zmdi-chevron-down"></i>-->
+<!--							</span>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--				</div>-->
+				<div class="form-right">
+					<h2>Client Details</h2>
+					<div class="form-row">
+						<input type="text" name="name" class="name" id="name" placeholder="Name" autocomplete="off" required >
+					</div>
+					<div class="form-row">
+						<input type="email" name="email" class="email" id="email" placeholder="Email" autocomplete="off" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="phonenumber" class="phonenumber" id="phonenumber" placeholder="Phone number" autocomplete="off" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="organisation_name" class="organisation_name" id="organisation_name" placeholder="Organisation Name" autocomplete="off" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="designation" class="designation" id="designation" placeholder="Designation" autocomplete="off" required>
+					</div>
+					<!--<div class="form-row">
+						<input type="text" name="organisation_type" class="organisation_type" id="organisation_type" placeholder="Organisation Type" required>
+					</div>-->
+					<div class="form-row">
+						<select name="organisation_type">
+						    <option value="#">Organisation Type</option>
+						    <option value="Start-up">Start-up</option>
+						    <option value="Organisation">Organisation</option>
+						    <option value="Retail">Retail</option>
+						</select>
+						<span class="select-btn">
+						  	<i class="zmdi zmdi-chevron-down"></i>
+						</span>
+					</div>
+					<div class="form-row form-row-2">
+							<select name="state">
+								<option value="#">State</option>
+							    <option value="Tamilnadu">Tamilnadu</option>
+							    <option value="Kerala">Kerala</option>
+							    <option value="Karnataka">Karnataka</option>
+							    <option value="Andra pradesh">Andra pradesh</option>
+							</select>
+							<span class="select-btn">
+							  	<i class="zmdi zmdi-chevron-down"></i>
+							</span>
+						</div>
+<!--					<div class="form-group">-->
+<!--						<div class="form-row form-row-1">-->
+<!--							<input type="text" name="zip" class="zip" id="zip" placeholder="Zip Code" required>-->
+<!--						</div>-->
+
+<!--					</div>-->
+					<div class="form-row">
+						<input type="text" name="city" class="city" id="city" placeholder="City" autocomplete="off" required>
+					</div>
+					<div class="form-row">
+						<input type="text" name="country" class="country" id="country" placeholder="Country" autocomplete="off" required>
+					</div>
+
+<!--					<div class="form-group">-->
+<!--						<div class="form-row form-row-1">-->
+<!--							<input type="text" name="code" class="code" id="code" placeholder="Code +" required>-->
+<!--						</div>-->
+<!--						<div class="form-row form-row-2">-->
+<!--							<input type="text" name="phone" class="phone" id="phone" placeholder="Phone Number" required>-->
+<!--						</div>-->
+<!--					</div>-->
+<!--					<div class="form-row">-->
+<!--						<input type="text" name="your_email" id="your_email" class="input-text" required pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="Your Email">-->
+<!--					</div>-->
+					<div class="form-checkbox">
+<!--						<label class="container"><p>I do accept the <a href="#" class="text">Terms and Conditions</a> of your site.</p>-->
+<!--						  	<input type="checkbox" name="checkbox">-->
+<!--						  	<span class="checkmark"></span>-->
+<!--						</label>-->
+					</div>
+					<div class="form-row-last">
+						<input type="submit" name="register" class="register" value="Submit">
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+</body><!-- This templates was made by Colorlib (https://colorlib.com) -->
+{% endblock %}
+</html>
